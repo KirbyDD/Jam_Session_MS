@@ -4,12 +4,11 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
+ruby '2.5.3'
+
+gem 'json'
 gem 'rack'
 gem 'faraday'
-gem 'figaro'
 gem 'sinatra'
-gem 'sinatra-contrib'
 gem 'pry'
-gem 'activerecord'
-gem 'sinatra-activerecord'
-gem 'ruby'
+gem 'rake'
