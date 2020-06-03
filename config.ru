@@ -1,7 +1,6 @@
-require 'rubygems'
 require 'bundler'
+require './lib/sinatra_service'
 
 Bundler.require
 
-require './sinatra_service'
-run Sinatra::Application
+run JamSessionService
