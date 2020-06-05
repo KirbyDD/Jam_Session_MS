@@ -7,6 +7,7 @@ class RequestHandler
   def spotify_playlist_endpoint(token)
     response = Faraday.get("https://api.spotify.com/v1/me/playlists") do |f|
       f.headers["Authorization"] = "Bearer #{token}"
+      f.params['limit'] = '50'
     end
     JSON.parse(response.body, symbolize_names: true).to_json
   end
